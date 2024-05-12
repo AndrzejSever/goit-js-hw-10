@@ -1,0 +1,28 @@
+body {
+  display: flex;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input[name='delay'] {
+  width: 270px;
+  height: 40px;
+}
+
+fieldset{
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    display: flex;
+    width: 270px;
+    margin: 8px auto;
+}
