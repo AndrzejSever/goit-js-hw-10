@@ -1,7 +1,6 @@
 
 
 body{
-    background-color: rgb(216, 228, 225);
     font-size: 20px;
 }
 
@@ -15,10 +14,10 @@ display: flex;
 display: flex;
 flex-direction: column;
 }
-.value {
 
+
+.hiddenBtn{
+    background-color: #f5efef;
+    color: #e3d9d9;
+    border: 1px solid;
 }
-.label {
-
-}
-
