@@ -39,8 +39,7 @@ const createPromise = waitingTime => {
 
 const showNotification = (message, type = 'info') => {
    iziToast.show({
-     title: 'info',
-     message: 'Time is up!',
+     message: message,
      color: '#4CAF50',
      position: 'topRight',
      messageColor: '#fff',

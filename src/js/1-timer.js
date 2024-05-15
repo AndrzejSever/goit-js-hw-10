@@ -1,5 +1,3 @@
-
-
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
@@ -43,6 +41,7 @@ const addingMarkup = {
 };
 
 function startTimer() {
+  disableInputs();
   const intervalId = setInterval(() => {
     const deltaTime = variables.userSelectedDate - new Date();
     if (deltaTime <= 0) {
@@ -55,6 +54,7 @@ function startTimer() {
         messageColor: '#fff',
         titleColor: '#fff',
       });
+      enableInputs();
       return;
     }
     const timeComponents = variables.convertMs(deltaTime);
@@ -79,6 +79,16 @@ function onDateSelected(selectedDates) {
       imageWidth: '24',
     });
   }
+}
+
+function disableInputs() {
+  variables.inputValue.disabled = true;
+  variables.buttonStart.disabled = true;
+}
+
+function enableInputs() {
+  variables.inputValue.disabled = false;
+  variables.buttonStart.disabled = false;
 }
 
 flatpickr('#datetime-picker', {
